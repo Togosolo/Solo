@@ -1,0 +1,66 @@
+{
+  "clock": {
+    "format": "{:%H\n%M}",
+    "tooltip": false
+  },
+  "cpu": {
+    "interval": 5,
+    "format": "",
+    "on-click": "kitty -e btop"
+  },
+    "memory": {
+    "interval": 5,
+    "format": "󰘚",
+    "tooltip": true,
+    "tooltip-format": "RAM: {used:0.1f}GB / {total:0.1f}GB",
+    "on-click": "kitty -e btop"
+  },
+  "pulseaudio": {
+    "scroll-step": 1,
+    "format": "{icon}",
+    "on-click": "pwvucontrol",
+    "on-click-right": "pamixer -t",
+    "tooltip-format": "Playing at {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "default": [
+        "",
+        "",
+        " "
+      ]
+    }
+  },
+  "network": {
+    "format-icons": [
+      "󰤯",
+      "󰤟",
+      "󰤢",
+      "󰤥",
+      "󰤨"
+    ],
+    "format": "{icon}",
+    "format-disconnected": "󰤮",
+    "on-click": "kitty -e nmtui"
+  },
+    "custom/notification": {
+    "tooltip": true,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "󱅫",
+      "none": "󰂜",
+      "dnd-notification": "󰂠",
+      "dnd-none": "󰪓",
+      "inhibited-notification": "󰂛",
+      "inhibited-none": "󰪑",
+      "dnd-inhibited-notification": "󰂛",
+      "dnd-inhibited-none": "󰪑"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+}
+
