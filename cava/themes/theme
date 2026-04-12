@@ -1,0 +1,7 @@
+[color]
+background = 'default'
+
+gradient = 1
+gradient_color_1 = '#ece900'
+gradient_color_2 = '#ffffff'
+gradient_color_3 = '#4b4a00'
